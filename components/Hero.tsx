@@ -28,7 +28,7 @@ export default function Hero() {
               className="bg-blue-600 text-white hover:bg-blue-700 font-semibold tracking-wide flex items-center gap-2"
               onClick={() => router.push("https://portal.preselix.id/register")}
             >
-              Mulai Gratis <ArrowRight className="w-4 h-4" />
+              Klik untuk Coba dulu <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
