@@ -1,68 +1,81 @@
 import Image from "next/image";
+import { Check } from "lucide-react";
 
-const Illustration = () => {
+const showcaseItems = [
+  {
+    title: "Presensi Per Mata Pelajaran",
+    description: "Sistem yang dirancang untuk mencatat kehadiran di setiap sesi kelas. Guru mata pelajaran dapat memastikan siswa tetap berada di kelas dari jam pertama hingga terakhir.",
+    features: [
+      "Input Cepat Awal Pelajaran",
+      "Kustomisasi Status (Hadir/Izin/Bolos)",
+      "Sinkronisasi Data Guru Mapel"
+    ],
+    image: "/images/scan_presensi_mobile.png",
+    reverse: false
+  },
+  {
+    title: "Pantau Riwayat Per Jam",
+    description: "Orang tua dan admin dapat melihat detail jam mana saja siswa hadir. Tidak ada lagi celah bagi siswa untuk meninggalkan sekolah di tengah jam pelajaran.",
+    features: [
+      "Log Kehadiran Mendetail",
+      "Notifikasi Bolos Per Jam",
+      "Statistik Disiplin Mingguan"
+    ],
+    image: "/images/presensi_manual.png",
+    reverse: true
+  }
+];
+
+export default function Illustration() {
   return (
-    <section className="container mx-auto bg-white my-8 p-5 lg:p-20 text-gray-800 space-y-4 md:space-y-6">
-      <h2 className="font-semibold text-center text-2xl md:text-3xl lg:text-4xl">
-        Tingkatkan sistem sekolah Anda di sini
-      </h2>
-      <p className="text-center mb-8 lg:mb-10 text-gray-600">
-        Presensi lebih cepat, mudah, dan akurat dengan teknologi QR Code & klik
-        digital.
-      </p>
-
-      <div className="mx-auto space-y-16">
-        {/* Section 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 lg:gap-8">
-          {/* 
-            NOTE: Karena src berupa string, width & height WAJIB diisi (angka pixel integer).
-            Class 'w-full' dsb akan mengatur tampilan responsifnya, 
-            tapi width/height di sini menentukan aspek rasio dasar.
-          */}
-          <Image
-            src="/images/scan_presensi_mobile.png"
-            alt="Presensi siswa via QR Code"
-            width={600}
-            height={600} // Disesuaikan agar kotak (aspect-square)
-            className="w-full aspect-square max-h-120 object-contain order-1 rounded-lg"
-          />
-          <div className="space-y-4 order-2">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Scan QR Code, Selesai Dalam Detik
-            </h3>
-            <p className="text-gray-700 text-lg">
-              Guru mata pelajaran cukup memindai QR Code, dan kehadiran siswa
-              langsung tercatat otomatis di sistem. Menghemat waktu, mengurangi
-              antrean, dan memudahkan orang tua memantau kehadiran secara
-              real-time.
-            </p>
-          </div>
+    <section id="showcase" className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-5 lg:px-20">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">Showcase Fitur</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Solusi Menyeluruh untuk Kebutuhan Sekolah Anda
+          </h3>
         </div>
 
-        {/* Section 2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 lg:gap-8">
-          <div className="space-y-4 order-2 md:order-1">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Presensi Manual Lebih Cepat & Akurat
-            </h3>
-            <p className="text-gray-700 text-lg">
-              Tinggal klik status kehadiran siswa — Hadir, Izin, atau Sakit
-              (atau status lain yang dikustom oleh operator sekolah sesuai
-              kebutuhan). Data langsung tersimpan dan otomatis masuk ke laporan
-              harian tanpa perlu rekap manual.
-            </p>
-          </div>
-          <Image
-            src="/images/presensi_manual.png"
-            alt="Presensi siswa manual"
-            width={800}
-            height={450} // Disesuaikan agar wide (aspect-video approx 16:9)
-            className="w-full aspect-video object-contain order-1 md:order-2 rounded-lg"
-          />
+        <div className="flex flex-col gap-24 md:gap-32">
+          {showcaseItems.map((item, index) => (
+            <div 
+              key={index} 
+              className={`flex flex-col ${item.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-12 lg:gap-24`}
+            >
+              <div className="flex-1 space-y-6">
+                <h4 className="text-3xl font-bold text-gray-900 leading-tight">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  {item.description}
+                </p>
+                <ul className="space-y-3">
+                  {item.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-center gap-3 text-gray-700">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
+                        <Check className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <span className="font-medium">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="flex-1 relative">
+                <div className={`absolute -inset-4 bg-gray-50 rounded-3xl -z-10 transform ${item.reverse ? '-rotate-2' : 'rotate-2'}`}></div>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover transform transition-transform hover:scale-[1.02] duration-500"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Illustration;
+}
