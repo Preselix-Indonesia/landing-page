@@ -415,9 +415,12 @@ export default function PrivacyPolicyPage() {
                 <p className="mt-4">
                   <strong>Retensi Data:</strong> Kami menyimpan data selama
                   sekolah langganan Anda aktif menggunakan platform Preselix
-                  atau hingga pihak sekolah secara tertulis mengajukan
-                  permintaan penghapusan data secara menyeluruh setelah kerja
-                  sama selesai.
+                  atau hingga pihak sekolah mengajukan permintaan penghapusan data
+                  setelah kerja sama selesai. Harap dicatat bahwa demi kepatuhan
+                  terhadap regulasi perpajakan dan hukum pembukuan keuangan, data
+                  transaksi pembayaran, bukti transfer, dan riwayat langganan akan
+                  tetap diarsipkan secara aman dalam bentuk anonim selama minimal
+                  5 tahun sebelum dimusnahkan secara permanen.
                 </p>
               </section>
 
@@ -486,7 +489,11 @@ export default function PrivacyPolicyPage() {
                     Meminta penghentian layanan notifikasi WhatsApp jika
                     terdapat keadaan khusus.
                   </li>
-                  <li>Meminta penghapusan permanen dari sistem kami.</li>
+                  <li>
+                    Meminta penghapusan permanen dari sistem kami (dengan
+                    pengecualian arsip bukti pembayaran dan riwayat transaksi
+                    yang wajib dipertahankan demi hukum pembukuan keuangan).
+                  </li>
                 </ul>
                 <p className="mt-4">
                   Karena pengunggahan data awal siswa dilakukan secara kolektif
