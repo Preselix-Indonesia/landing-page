@@ -22,8 +22,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Solusi digitalisasi presensi sekolah terbaik di Indonesia.
-              Membantu menciptakan ekosistem pendidikan yang lebih modern,
+              Preselix dikembangkan oleh <strong>PT PRESELIX DIGITAL NUSANTARA</strong>.
+              Solusi digitalisasi presensi sekolah terbaik di Indonesia untuk ekosistem pendidikan yang lebih modern,
               efisien, dan transparan.
             </p>
             <div className="flex gap-4">
@@ -122,8 +122,9 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-500 mt-1" />
                 <span>
-                  Jl. Perintis Kemerdekaan 7, Tamalanrea Indah, Tamalanrea, Kota
-                  Makassar, Sulawesi Selatan 90245
+                  PT PRESELIX DIGITAL NUSANTARA <br />
+                  GREEN HARMONY PERINTIS BLOK D/11, Tamalanrea
+                  Indah, Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -140,7 +141,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
           <p>
-            © {new Date().getFullYear()} Preselix. All rights reserved. Dibuat
+            © {new Date().getFullYear()} PT PRESELIX DIGITAL NUSANTARA. All rights reserved. Dibuat
             dengan ❤️ untuk Pendidikan Indonesia.
           </p>
         </div>
