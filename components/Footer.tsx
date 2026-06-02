@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
       <div className="container mx-auto px-5 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
@@ -88,17 +88,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal/Support - Commented out for now
+          {/* Legal/Support */}
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Dukungan</h4>
             <ul className="space-y-4">
-              <li><Link href="#" className="hover:text-white transition-colors">Pusat Bantuan</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Kebijakan Privasi</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Dokumentasi API</Link></li>
+              <li>
+                <Link
+                  href="https://portal.preselix.id/help"
+                  className="hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Pusat Bantuan
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                  Kebijakan Privasi
+                </Link>
+              </li>
+              <li>
+                <span className="text-gray-500 cursor-not-allowed">
+                  Syarat & Ketentuan
+                </span>
+              </li>
             </ul>
           </div>
-          */}
 
           {/* Contact Info */}
           <div>
