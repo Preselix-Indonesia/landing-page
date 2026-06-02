@@ -208,7 +208,7 @@ export default function PrivacyPolicyPage() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Selamat datang di <strong>Preselix</strong>. Kami sangat
+                  Selamat datang di <strong>Preselix</strong> (dioperasikan oleh <strong>PT PRESELIX DIGITAL NUSANTARA</strong>). Kami sangat
                   menghargai kepercayaan yang Anda berikan kepada kami untuk
                   mengelola informasi penting Anda. Preselix (&quot;kami&quot;,
                   &quot;aplikasi kami&quot;, atau &quot;platform&quot;)
@@ -550,7 +550,9 @@ export default function PrivacyPolicyPage() {
                       Alamat Kantor
                     </span>
                     <span className="text-xs text-gray-500 leading-tight">
-                      Tamalanrea Indah, Kota Makassar, Sulawesi Selatan 90245
+                      PT PRESELIX DIGITAL NUSANTARA <br />
+                      GREEN HARMONY PERINTIS BLOK D/11, Tamalanrea
+                      Indah, Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245
                     </span>
                   </div>
                 </div>
