@@ -82,7 +82,15 @@ export default function Footer() {
                   href="https://portal.preselix.id"
                   className="hover:text-white transition-colors"
                 >
-                  Masuk Portal
+                  Masuk Guru & Orang Tua
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://student.preselix.id"
+                  className="hover:text-white transition-colors"
+                >
+                  Masuk Portal Siswa
                 </Link>
               </li>
             </ul>
