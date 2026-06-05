@@ -108,9 +108,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="text-gray-500 cursor-not-allowed">
+                <Link href="/terms" className="hover:text-white transition-colors">
                   Syarat & Ketentuan
-                </span>
+                </Link>
               </li>
             </ul>
           </div>
