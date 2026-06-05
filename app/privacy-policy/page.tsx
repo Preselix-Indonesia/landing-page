@@ -39,7 +39,7 @@ const SECTIONS = [
   },
   {
     id: "pihak-ketiga",
-    title: "5. Layanan Pihak Ketiga & WhatsApp",
+    title: "5. Pihak Ketiga & Pembayaran",
     icon: <HelpCircle className="w-5 h-5" />,
   },
   {
@@ -137,7 +137,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto px-5 lg:px-20 py-12 flex-grow">
+      <div className="container mx-auto px-5 lg:px-20 py-12 grow">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Desktop Sidebar Navigation */}
           <aside className="hidden lg:block lg:w-1/4">
@@ -179,7 +179,7 @@ export default function PrivacyPolicyPage() {
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`flex-shrink-0 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+                  className={`shrink-0 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                     isActive
                       ? "bg-blue-600 text-white shadow-md shadow-blue-600/20"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -208,7 +208,8 @@ export default function PrivacyPolicyPage() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Selamat datang di <strong>Preselix</strong> (dioperasikan oleh <strong>PT PRESELIX DIGITAL NUSANTARA</strong>). Kami sangat
+                  Selamat datang di <strong>Preselix</strong> (dioperasikan oleh{" "}
+                  <strong>PT PRESELIX DIGITAL NUSANTARA</strong>). Kami sangat
                   menghargai kepercayaan yang Anda berikan kepada kami untuk
                   mengelola informasi penting Anda. Preselix (&quot;kami&quot;,
                   &quot;aplikasi kami&quot;, atau &quot;platform&quot;)
@@ -415,16 +416,17 @@ export default function PrivacyPolicyPage() {
                 <p className="mt-4">
                   <strong>Retensi Data:</strong> Kami menyimpan data selama
                   sekolah langganan Anda aktif menggunakan platform Preselix
-                  atau hingga pihak sekolah mengajukan permintaan penghapusan data
-                  setelah kerja sama selesai. Harap dicatat bahwa demi kepatuhan
-                  terhadap regulasi perpajakan dan hukum pembukuan keuangan, data
-                  transaksi pembayaran, bukti transfer, dan riwayat langganan akan
-                  tetap diarsipkan secara aman dalam bentuk anonim selama minimal
-                  5 tahun sebelum dimusnahkan secara permanen.
+                  atau hingga pihak sekolah mengajukan permintaan penghapusan
+                  data setelah kerja sama selesai. Harap dicatat bahwa demi
+                  kepatuhan terhadap regulasi perpajakan dan hukum pembukuan
+                  keuangan, data transaksi pembayaran otomatis, riwayat tagihan
+                  (invoice), dan riwayat langganan akan tetap diarsipkan secara
+                  aman dalam bentuk anonim selama minimal 5 tahun sebelum
+                  dimusnahkan secara permanen.
                 </p>
               </section>
 
-              {/* 5. Layanan Pihak Ketiga & WhatsApp */}
+              {/* 5. Layanan Pihak Ketiga, WhatsApp & Pembayaran */}
               <section
                 id="pihak-ketiga"
                 className="scroll-mt-28 mb-12 border-b border-gray-100 pb-10"
@@ -434,20 +436,35 @@ export default function PrivacyPolicyPage() {
                     <HelpCircle className="w-6 h-6" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">
-                    5. Layanan Pihak Ketiga & WhatsApp
+                    5. Layanan Pihak Ketiga, WhatsApp & Pembayaran
                   </h2>
                 </div>
                 <p className="mb-4">
                   Untuk memproses pengiriman notifikasi WhatsApp secara instan
                   ke nomor WhatsApp orang tua siswa, kami menggunakan gerbang
-                  API pihak ketiga yang tepercaya (WhatsApp Gateway API).
+                  API pihak ketiga yang tepercaya (WhatsApp Gateway API). Kami
+                  hanya mengirimkan informasi minimal berupa nomor WhatsApp
+                  tujuan, nama anak, dan status ketidakhadiran pelajaran yang
+                  bersangkutan secara aman.
                 </p>
                 <p className="mb-4">
-                  Kami hanya mengirimkan informasi minimal berupa: nomor
-                  WhatsApp tujuan, nama anak, dan status ketidakhadiran
-                  pelajaran yang bersangkutan ke server API pihak ketiga
-                  tersebut. Kami memastikan bahwa mitra API kami tunduk pada
-                  komitmen kerahasiaan data yang sama ketatnya.
+                  Untuk memproses pembayaran langganan secara otomatis, instan,
+                  dan aman, kami mengintegrasikan layanan gerbang pembayaran
+                  pihak ketiga dari{" "}
+                  <strong>Xendit (PT Sinar Digital Terdepan)</strong>. Data
+                  transaksi minimal seperti ID transaksi, nama instansi/sekolah,
+                  alamat email, dan nominal tagihan akan diteruskan ke sistem
+                  Xendit secara aman guna memproses tagihan/invoice.
+                </p>
+                <p className="mb-4">
+                  Harap dicatat bahwa Preselix{" "}
+                  <strong>
+                    tidak menyimpan data kartu kredit/debit atau kredensial
+                    perbankan Anda langsung di server kami
+                  </strong>
+                  . Seluruh proses pembayaran diproteksi menggunakan enkripsi
+                  aman standar industri PCI-DSS tingkat tinggi langsung melalui
+                  infrastruktur pembayaran Xendit.
                 </p>
                 <p className="p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-r-xl text-sm text-yellow-800">
                   <strong>Pernyataan Bebas Iklan:</strong> Preselix tidak pernah
@@ -491,8 +508,9 @@ export default function PrivacyPolicyPage() {
                   </li>
                   <li>
                     Meminta penghapusan permanen dari sistem kami (dengan
-                    pengecualian arsip bukti pembayaran dan riwayat transaksi
-                    yang wajib dipertahankan demi hukum pembukuan keuangan).
+                    pengecualian riwayat transaksi keuangan dan invoice
+                    pembayaran yang wajib dipertahankan demi hukum pembukuan
+                    keuangan).
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -551,8 +569,8 @@ export default function PrivacyPolicyPage() {
                     </span>
                     <span className="text-xs text-gray-500 leading-tight">
                       PT PRESELIX DIGITAL NUSANTARA <br />
-                      GREEN HARMONY PERINTIS BLOK D/11, Tamalanrea
-                      Indah, Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245
+                      GREEN HARMONY PERINTIS BLOK D/11, Tamalanrea Indah,
+                      Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245
                     </span>
                   </div>
                 </div>
