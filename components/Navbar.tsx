@@ -11,21 +11,7 @@ import { ChevronDown, Users, GraduationCap } from "lucide-react";
 const Navbar: FC<{ className?: string }> = ({ className }) => {
   const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const hasHoverRef = useRef(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const mediaQuery = window.matchMedia("(hover: hover)");
-      hasHoverRef.current = mediaQuery.matches;
-
-      const listener = (e: MediaQueryListEvent) => {
-        hasHoverRef.current = e.matches;
-      };
-      mediaQuery.addEventListener("change", listener);
-      return () => mediaQuery.removeEventListener("change", listener);
-    }
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -87,12 +73,7 @@ const Navbar: FC<{ className?: string }> = ({ className }) => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div
-            ref={dropdownRef}
-            className="relative"
-            onMouseEnter={() => hasHoverRef.current && setIsDropdownOpen(true)}
-            onMouseLeave={() => hasHoverRef.current && setIsDropdownOpen(false)}
-          >
+          <div ref={dropdownRef} className="relative">
             <Button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
               variant="outline"
