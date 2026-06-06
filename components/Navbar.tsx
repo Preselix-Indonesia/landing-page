@@ -11,10 +11,24 @@ import { ChevronDown, Users, GraduationCap } from "lucide-react";
 const Navbar: FC<{ className?: string }> = ({ className }) => {
   const router = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const hasHoverRef = useRef(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    if (typeof window !== "undefined") {
+      const mediaQuery = window.matchMedia("(hover: hover)");
+      hasHoverRef.current = mediaQuery.matches;
+
+      const listener = (e: MediaQueryListEvent) => {
+        hasHoverRef.current = e.matches;
+      };
+      mediaQuery.addEventListener("change", listener);
+      return () => mediaQuery.removeEventListener("change", listener);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
@@ -23,7 +37,11 @@ const Navbar: FC<{ className?: string }> = ({ className }) => {
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -72,8 +90,8 @@ const Navbar: FC<{ className?: string }> = ({ className }) => {
           <div
             ref={dropdownRef}
             className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
+            onMouseEnter={() => hasHoverRef.current && setIsDropdownOpen(true)}
+            onMouseLeave={() => hasHoverRef.current && setIsDropdownOpen(false)}
           >
             <Button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
