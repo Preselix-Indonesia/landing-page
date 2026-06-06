@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -94,7 +95,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body className={`${dmSans.variable} antialiased`}>{children}</body>
+      <body className={`${dmSans.variable} antialiased`}>
+        {children}
+        <ScrollToTop />
+      </body>
     </html>
   );
 }
