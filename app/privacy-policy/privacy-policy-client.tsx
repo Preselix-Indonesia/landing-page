@@ -57,6 +57,24 @@ const SECTIONS = [
 export default function PrivacyPolicyClient() {
   const [activeSection, setActiveSection] = useState("pendahuluan");
   const sectionsRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const container = mobileMenuRef.current;
+    const activeBtn = document.getElementById(`mobile-tab-${activeSection}`);
+    if (container && activeBtn) {
+      const containerWidth = container.clientWidth;
+      const btnLeft = activeBtn.offsetLeft;
+      const btnWidth = activeBtn.clientWidth;
+
+      const targetScrollLeft = btnLeft - containerWidth / 2 + btnWidth / 2;
+
+      container.scrollTo({
+        left: targetScrollLeft,
+        behavior: "smooth",
+      });
+    }
+  }, [activeSection]);
 
   useEffect(() => {
     const observerOptions = {
@@ -172,12 +190,16 @@ export default function PrivacyPolicyClient() {
           </aside>
 
           {/* Mobile Sticky Navigation Menu */}
-          <div className="lg:hidden sticky top-[68px] z-40 bg-white/95 backdrop-blur-md py-3 -mx-5 px-5 border-b border-gray-100 flex gap-2 overflow-x-auto scrollbar-none shadow-sm">
+          <div
+            ref={mobileMenuRef}
+            className="lg:hidden sticky top-[68px] z-40 bg-white/95 backdrop-blur-md py-3 -mx-5 px-5 border-b border-gray-100 flex gap-2 overflow-x-auto scrollbar-none shadow-sm"
+          >
             {SECTIONS.map((section) => {
               const isActive = activeSection === section.id;
               return (
                 <button
                   key={section.id}
+                  id={`mobile-tab-${section.id}`}
                   onClick={() => scrollToSection(section.id)}
                   className={`shrink-0 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                     isActive
