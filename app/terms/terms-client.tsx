@@ -152,7 +152,8 @@ export default function TermsClient() {
             Syarat & Ketentuan
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl font-light">
-            Ketentuan penggunaan layanan, batasan lisensi, dan kesepakatan operasional bagi seluruh sekolah mitra Preselix.
+            Ketentuan penggunaan layanan, batasan lisensi, dan kesepakatan
+            operasional bagi seluruh sekolah mitra Preselix.
           </p>
           <div className="mt-8 inline-block bg-white/10 backdrop-blur-md rounded-full px-5 py-2 text-sm text-blue-100">
             Terakhir diperbarui:{" "}
@@ -238,20 +239,25 @@ export default function TermsClient() {
                 </div>
                 <p className="mb-4">
                   Selamat datang di <strong>Preselix</strong> (dioperasikan oleh{" "}
-                  <strong>PT PRESELIX DIGITAL NUSANTARA</strong>). Dengan mengakses, mendaftarkan
-                  diri, atau menggunakan platform, dasbor, dan layanan kami, Anda secara hukum
-                  menyatakan telah membaca, memahami, dan menyetujui untuk terikat oleh Syarat & Ketentuan ini.
+                  <strong>PT PRESELIX DIGITAL NUSANTARA</strong>). Dengan
+                  mengakses, mendaftarkan diri, atau menggunakan platform,
+                  dasbor, dan layanan kami, Anda secara hukum menyatakan telah
+                  membaca, memahami, dan menyetujui untuk terikat oleh Syarat &
+                  Ketentuan ini.
                 </p>
                 <p className="mb-4">
-                  Syarat & Ketentuan ini mengatur hubungan antara Preselix sebagai penyedia layanan
-                  SaaS (Software as a Service) digitalisasi presensi sekolah dengan instansi pendidikan atau
-                  sekolah mitra (selanjutnya disebut sebagai &quot;Operator Sekolah&quot;, &quot;Mitra&quot;,
-                  atau &quot;Anda&quot;) serta seluruh pengguna akhir yang berada di bawah kewenangan Anda (Guru,
-                  Staf Sekolah, Siswa, dan Orang Tua/Wali).
+                  Syarat & Ketentuan ini mengatur hubungan antara Preselix
+                  sebagai penyedia layanan SaaS (Software as a Service)
+                  digitalisasi presensi sekolah dengan instansi pendidikan atau
+                  sekolah mitra (selanjutnya disebut sebagai &quot;Operator
+                  Sekolah&quot;, &quot;Mitra&quot;, atau &quot;Anda&quot;) serta
+                  seluruh pengguna akhir yang berada di bawah kewenangan Anda
+                  (Guru, Staf Sekolah, Siswa, dan Orang Tua/Wali).
                 </p>
                 <p>
-                  Apabila Anda tidak menyetujui salah satu atau seluruh ketentuan dalam dokumen ini, Anda
-                  tidak diperkenankan untuk melanjutkan penggunaan layanan Preselix.
+                  Apabila Anda tidak menyetujui salah satu atau seluruh
+                  ketentuan dalam dokumen ini, Anda tidak diperkenankan untuk
+                  melanjutkan penggunaan layanan Preselix.
                 </p>
               </section>
 
@@ -269,24 +275,35 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Untuk mendapatkan akses penuh ke dasbor administrasi sekolah di Preselix, Anda wajib melakukan
-                  pendaftaran akun Operator Sekolah secara resmi.
+                  Untuk mendapatkan akses penuh ke dasbor administrasi sekolah
+                  di Preselix, Anda wajib melakukan pendaftaran akun Operator
+                  Sekolah secara resmi.
                 </p>
                 <ul className="list-disc pl-5 space-y-3 mb-4">
                   <li>
-                    <strong className="text-gray-900">Kerahasiaan Akun:</strong> Operator bertanggung jawab penuh untuk
-                    menjaga kerahasiaan kata sandi (password) dan detail akun log masuk. Anda dilarang memberikan akses
-                    log masuk akun Operator Anda kepada pihak ketiga mana pun tanpa persetujuan tertulis dari pihak Preselix.
+                    <strong className="text-gray-900">Kerahasiaan Akun:</strong>{" "}
+                    Operator bertanggung jawab penuh untuk menjaga kerahasiaan
+                    kata sandi (password) dan detail akun log masuk. Anda
+                    dilarang memberikan akses log masuk akun Operator Anda
+                    kepada pihak ketiga mana pun tanpa persetujuan tertulis dari
+                    pihak Preselix.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Tanggung Jawab Aktivitas:</strong> Setiap tindakan, pengaturan data,
-                    penghapusan data, atau perubahan konfigurasi yang dilakukan melalui dasbor Operator dianggap sebagai
-                    tindakan sah yang mewakili instansi sekolah Anda.
+                    <strong className="text-gray-900">
+                      Tanggung Jawab Aktivitas:
+                    </strong>{" "}
+                    Setiap tindakan, pengaturan data, penghapusan data, atau
+                    perubahan konfigurasi yang dilakukan melalui dasbor Operator
+                    dianggap sebagai tindakan sah yang mewakili instansi sekolah
+                    Anda.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Pelaporan Pelanggaran:</strong> Anda wajib segera melaporkan kepada tim
-                    dukungan Preselix jika mencurigai adanya akses tidak sah, kebocoran akun, atau masalah keamanan lainnya
-                    pada sistem login sekolah Anda.
+                    <strong className="text-gray-900">
+                      Pelaporan Pelanggaran:
+                    </strong>{" "}
+                    Anda wajib segera melaporkan kepada tim dukungan Preselix
+                    jika mencurigai adanya akses tidak sah, kebocoran akun, atau
+                    masalah keamanan lainnya pada sistem login sekolah Anda.
                   </li>
                 </ul>
               </section>
@@ -305,25 +322,40 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Preselix menyediakan fitur otomatisasi pengiriman pesan notifikasi kehadiran siswa secara langsung ke nomor
-                  WhatsApp orang tua atau wali murid.
+                  Preselix menyediakan fitur otomatisasi pengiriman pesan
+                  notifikasi kehadiran siswa secara langsung ke nomor WhatsApp
+                  orang tua atau wali murid.
                 </p>
                 <ul className="list-disc pl-5 space-y-3 mb-4">
                   <li>
-                    <strong className="text-gray-900">Validitas Nomor Tujuan:</strong> Pihak sekolah (Operator) bertanggung jawab
-                    penuh atas kebenaran, keabsahan, dan kepemilikan nomor WhatsApp orang tua/wali murid yang diunggah ke sistem.
+                    <strong className="text-gray-900">
+                      Validitas Nomor Tujuan:
+                    </strong>{" "}
+                    Pihak sekolah (Operator) bertanggung jawab penuh atas
+                    kebenaran, keabsahan, dan kepemilikan nomor WhatsApp orang
+                    tua/wali murid yang diunggah ke sistem.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Kebijakan Anti-Spam:</strong> Saluran pengiriman pesan notifikasi WhatsApp
-                    hanya boleh digunakan untuk kepentingan informasi kehadiran, akademis, dan kegiatan sekolah resmi. Penggunaan
-                    sistem untuk mengirim spam, materi promosi pihak luar, atau konten ilegal lainnya dilarang keras dan akan berakibat
-                    pada penutupan akun secara permanen.
+                    <strong className="text-gray-900">
+                      Kebijakan Anti-Spam:
+                    </strong>{" "}
+                    Saluran pengiriman pesan notifikasi WhatsApp hanya boleh
+                    digunakan untuk kepentingan informasi kehadiran, akademis,
+                    dan kegiatan sekolah resmi. Penggunaan sistem untuk mengirim
+                    spam, materi promosi pihak luar, atau konten ilegal lainnya
+                    dilarang keras dan akan berakibat pada penutupan akun secara
+                    permanen.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Ketergantungan Infrastruktur:</strong> Anda memahami bahwa pengiriman pesan notifikasi
-                    WhatsApp bergantung pada integrasi API gerbang WhatsApp pihak ketiga, konektivitas internet, serta kestabilan jaringan
-                    seluler penerima. Preselix tidak bertanggung jawab atas keterlambatan atau kegagalan pengiriman pesan yang disebabkan oleh
-                    gangguan di luar sistem inti Preselix.
+                    <strong className="text-gray-900">
+                      Ketergantungan Infrastruktur:
+                    </strong>{" "}
+                    Anda memahami bahwa pengiriman pesan notifikasi WhatsApp
+                    bergantung pada integrasi API gerbang WhatsApp pihak ketiga,
+                    konektivitas internet, serta kestabilan jaringan seluler
+                    penerima. Preselix tidak bertanggung jawab atas
+                    keterlambatan atau kegagalan pengiriman pesan yang
+                    disebabkan oleh gangguan di luar sistem inti Preselix.
                   </li>
                 </ul>
               </section>
@@ -342,25 +374,41 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Penggunaan layanan platform Preselix tunduk pada biaya berlangganan sesuai paket yang disepakati oleh sekolah.
+                  Penggunaan layanan platform Preselix tunduk pada biaya
+                  berlangganan sesuai paket yang disepakati oleh sekolah.
                 </p>
                 <ul className="list-disc pl-5 space-y-3 mb-4">
                   <li>
-                    <strong className="text-gray-900">Pemrosesan Tagihan Otomatis:</strong> Seluruh transaksi pembayaran langganan sekolah diproses
-                    secara otomatis, instan, dan aman melalui integrasi payment gateway pihak ketiga dari **Xendit (PT Sinar Digital Terdepan)**.
+                    <strong className="text-gray-900">
+                      Pemrosesan Tagihan Otomatis:
+                    </strong>{" "}
+                    Seluruh transaksi pembayaran langganan sekolah diproses
+                    secara otomatis, instan, dan aman melalui integrasi payment
+                    gateway pihak ketiga dari **Xendit (PT Sinar Digital
+                    Terdepan)**.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Jatuh Tempo:</strong> Tagihan (invoice) berkala akan diterbitkan secara otomatis oleh sistem sebelum masa
-                    aktif langganan berakhir. Pembayaran harus dilunasi sebelum tanggal jatuh tempo yang tertera di dalam invoice pembayaran.
+                    <strong className="text-gray-900">Jatuh Tempo:</strong>{" "}
+                    Tagihan (invoice) berkala akan diterbitkan secara otomatis
+                    oleh sistem sebelum masa aktif langganan berakhir.
+                    Pembayaran harus dilunasi sebelum tanggal jatuh tempo yang
+                    tertera di dalam invoice pembayaran.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Penangguhan Layanan (Suspension):</strong> Jika kewajiban pembayaran tertunda melampaui tanggal jatuh tempo,
-                    Preselix berhak membatasi atau menangguhkan sementara seluruh akses dasbor sekolah dan menghentikan pengiriman notifikasi WhatsApp
-                    sampai seluruh tunggakan dilunasi.
+                    <strong className="text-gray-900">
+                      Penangguhan Layanan (Suspension):
+                    </strong>{" "}
+                    Jika kewajiban pembayaran tertunda melampaui tanggal jatuh
+                    tempo, Preselix berhak membatasi atau menangguhkan sementara
+                    seluruh akses dasbor sekolah dan menghentikan pengiriman
+                    notifikasi WhatsApp sampai seluruh tunggakan dilunasi.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Non-Refundable:</strong> Kecuali ditentukan lain dalam kontrak perjanjian kerja sama tertulis yang ditandatangani
-                    kedua belah pihak, seluruh biaya langganan yang telah didebit atau dibayarkan melalui Xendit bersifat final dan tidak dapat dikembalikan
+                    <strong className="text-gray-900">Non-Refundable:</strong>{" "}
+                    Kecuali ditentukan lain dalam kontrak perjanjian kerja sama
+                    tertulis yang ditandatangani kedua belah pihak, seluruh
+                    biaya langganan yang telah didebit atau dibayarkan melalui
+                    Xendit bersifat final dan tidak dapat dikembalikan
                     (non-refundable).
                   </li>
                 </ul>
@@ -380,16 +428,26 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Anda berhak untuk berhenti menggunakan layanan Preselix atau menghapus akun sekolah Anda kapan saja.
+                  Anda berhak untuk berhenti menggunakan layanan Preselix atau
+                  menghapus akun sekolah Anda kapan saja.
                 </p>
                 <ul className="list-disc pl-5 space-y-3 mb-4">
                   <li>
-                    <strong className="text-gray-900">Penghapusan Mandiri (Self-Delete):</strong> Melalui fitur manajemen profil Operator, sekolah dapat mengajukan
-                    penghapusan data secara mandiri. Proses ini akan menghapus seluruh data siswa, absensi kehadiran, data guru, data orang tua, dan konfigurasi instansi secara permanen dalam database operasional aktif.
+                    <strong className="text-gray-900">
+                      Penghapusan Mandiri (Self-Delete):
+                    </strong>{" "}
+                    Melalui fitur manajemen profil Operator, sekolah dapat
+                    mengajukan penghapusan data secara mandiri. Proses ini akan
+                    menghapus seluruh data siswa, absensi kehadiran, data guru,
+                    data orang tua, dan konfigurasi instansi secara permanen
+                    dalam database operasional aktif.
                   </li>
                   <li>
-                    <strong className="text-gray-900">Arsip Keuangan:</strong> Untuk mematuhi peraturan perpajakan dan undang-undang pembukuan keuangan di Indonesia,
-                    seluruh riwayat pembayaran, transaksi billing otomatis, dan data invoice akan diarsipkan secara aman dalam bentuk data anonim selama minimal 5 tahun
+                    <strong className="text-gray-900">Arsip Keuangan:</strong>{" "}
+                    Untuk mematuhi peraturan perpajakan dan undang-undang
+                    pembukuan keuangan di Indonesia, seluruh riwayat pembayaran,
+                    transaksi billing otomatis, dan data invoice akan diarsipkan
+                    secara aman dalam bentuk data anonim selama minimal 5 tahun
                     sebelum dihancurkan secara total.
                   </li>
                 </ul>
@@ -409,12 +467,19 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Seluruh hak kekayaan intelektual yang melekat pada platform Preselix adalah milik eksklusif **PT PRESELIX DIGITAL NUSANTARA**.
+                  Seluruh hak kekayaan intelektual yang melekat pada platform
+                  Preselix adalah milik eksklusif **PT PRESELIX DIGITAL
+                  NUSANTARA**.
                 </p>
                 <p className="mb-4">
-                  Hak ini mencakup namun tidak terbatas pada: kode sumber (source code), desain antarmuka pengguna (UI/UX), grafik, gambar, dokumentasi sistem, database,
-                  serta merek dagang &quot;Preselix&quot;. Anda tidak memiliki hak untuk merekayasa balik (reverse engineer), membongkar kode (decompile), menyalin, mendistribusikan,
-                  atau membuat karya turunan dari platform Preselix tanpa izin tertulis yang sah dari pihak kami.
+                  Hak ini mencakup namun tidak terbatas pada: kode sumber
+                  (source code), desain antarmuka pengguna (UI/UX), grafik,
+                  gambar, dokumentasi sistem, database, serta merek dagang
+                  &quot;Preselix&quot;. Anda tidak memiliki hak untuk merekayasa
+                  balik (reverse engineer), membongkar kode (decompile),
+                  menyalin, mendistribusikan, atau membuat karya turunan dari
+                  platform Preselix tanpa izin tertulis yang sah dari pihak
+                  kami.
                 </p>
               </section>
 
@@ -432,13 +497,19 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Layanan Preselix disediakan kepada sekolah dengan prinsip &quot;sebagaimana adanya&quot; (as is) dan &quot;sebagaimana tersedia&quot; (as available). Kami tidak
-                  menjamin bahwa sistem akan beroperasi tanpa kesalahan teknis (error-free) atau tanpa gangguan (uninterrupted) sepanjang waktu.
+                  Layanan Preselix disediakan kepada sekolah dengan prinsip
+                  &quot;sebagaimana adanya&quot; (as is) dan &quot;sebagaimana
+                  tersedia&quot; (as available). Kami tidak menjamin bahwa
+                  sistem akan beroperasi tanpa kesalahan teknis (error-free)
+                  atau tanpa gangguan (uninterrupted) sepanjang waktu.
                 </p>
                 <p className="mb-4">
-                  Dalam batasan hukum yang berlaku di Indonesia, **PT PRESELIX DIGITAL NUSANTARA** tidak dapat dituntut atas kerugian tidak langsung, kerugian insidental,
-                  atau konsekuensi negatif lainnya (seperti hilangnya reputasi sekolah, kesalahan laporan absensi manual, atau kegagalan penyampaian pesan darurat ke wali murid)
-                  akibat penggunaan sistem kami.
+                  Dalam batasan hukum yang berlaku di Indonesia, **PT PRESELIX
+                  DIGITAL NUSANTARA** tidak dapat dituntut atas kerugian tidak
+                  langsung, kerugian insidental, atau konsekuensi negatif
+                  lainnya (seperti hilangnya reputasi sekolah, kesalahan laporan
+                  absensi manual, atau kegagalan penyampaian pesan darurat ke
+                  wali murid) akibat penggunaan sistem kami.
                 </p>
               </section>
 
@@ -456,12 +527,18 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Syarat & Ketentuan ini diatur dan tunduk pada ketentuan hukum positif yang berlaku di bawah yurisdiksi Negara Kesatuan Republik Indonesia.
+                  Syarat & Ketentuan ini diatur dan tunduk pada ketentuan hukum
+                  positif yang berlaku di bawah yurisdiksi Negara Kesatuan
+                  Republik Indonesia.
                 </p>
                 <p className="mb-4">
-                  Setiap perselisihan atau sengketa yang timbul antara pihak sekolah dengan Preselix akan diupayakan secara maksimal untuk diselesaikan secara kekeluargaan
-                  melalui musyawarah mufakat. Apabila kesepakatan tidak tercapai dalam waktu 30 hari kalender, maka penyelesaian sengketa akan dilanjutkan ke jalur hukum formal melalui
-                  kepaniteraan Pengadilan Negeri Makassar, Sulawesi Selatan.
+                  Setiap perselisihan atau sengketa yang timbul antara pihak
+                  sekolah dengan Preselix akan diupayakan secara maksimal untuk
+                  diselesaikan secara kekeluargaan melalui musyawarah mufakat.
+                  Apabila kesepakatan tidak tercapai dalam waktu 30 hari
+                  kalender, maka penyelesaian sengketa akan dilanjutkan ke jalur
+                  hukum formal melalui kepaniteraan Pengadilan Negeri Makassar,
+                  Sulawesi Selatan.
                 </p>
               </section>
 
@@ -476,8 +553,10 @@ export default function TermsClient() {
                   </h2>
                 </div>
                 <p className="mb-6">
-                  Jika pihak administrasi sekolah memiliki kendala teknis, pertanyaan seputar tagihan Xendit, atau membutuhkan penjelasan tambahan seputar
-                  Syarat & Ketentuan layanan ini, silakan hubungi saluran dukungan pelanggan kami:
+                  Jika pihak administrasi sekolah memiliki kendala teknis,
+                  pertanyaan seputar tagihan Xendit, atau membutuhkan penjelasan
+                  tambahan seputar Syarat & Ketentuan layanan ini, silakan
+                  hubungi saluran dukungan pelanggan kami:
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
