@@ -37,8 +37,8 @@ const SECTIONS = [
     icon: <HelpCircle className="w-5 h-5" />,
   },
   {
-    id: "pembatalan-penghapusan",
-    title: "5. Pembatalan & Penghapusan",
+    id: "pembatalan-layanan",
+    title: "5. Pembatalan Layanan",
     icon: <CheckCircle className="w-5 h-5" />,
   },
   {
@@ -414,9 +414,9 @@ export default function TermsClient() {
                 </ul>
               </section>
 
-              {/* 5. Pembatalan & Penghapusan Akun */}
+              {/* 5. Pembatalan Layanan */}
               <section
-                id="pembatalan-penghapusan"
+                id="pembatalan-layanan"
                 className="scroll-mt-28 mb-12 border-b border-gray-100 pb-10"
               >
                 <div className="flex items-center gap-3 mb-6">
@@ -424,23 +424,22 @@ export default function TermsClient() {
                     <CheckCircle className="w-6 h-6" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">
-                    5. Pembatalan & Penghapusan Akun
+                    5. Pembatalan Layanan
                   </h2>
                 </div>
                 <p className="mb-4">
-                  Anda berhak untuk berhenti menggunakan layanan Preselix atau
-                  menghapus akun sekolah Anda kapan saja.
+                  Anda berhak untuk berhenti menggunakan layanan Preselix kapan
+                  saja dengan mengajukan permohonan pembatalan kepada tim
+                  dukungan kami.
                 </p>
                 <ul className="list-disc pl-5 space-y-3 mb-4">
                   <li>
                     <strong className="text-gray-900">
-                      Penghapusan Mandiri (Self-Delete):
+                      Penghentian Akses:
                     </strong>{" "}
-                    Melalui fitur manajemen profil Operator, sekolah dapat
-                    mengajukan penghapusan data secara mandiri. Proses ini akan
-                    menghapus seluruh data siswa, absensi kehadiran, data guru,
-                    data orang tua, dan konfigurasi instansi secara permanen
-                    dalam database operasional aktif.
+                    Setelah pembatalan diproses, akses sekolah Anda ke dasbor
+                    Operator dan fitur notifikasi WhatsApp akan dinonaktifkan
+                    pada akhir periode langganan berjalan.
                   </li>
                   <li>
                     <strong className="text-gray-900">Arsip Keuangan:</strong>{" "}
