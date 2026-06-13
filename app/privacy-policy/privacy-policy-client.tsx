@@ -44,7 +44,7 @@ const SECTIONS = [
   },
   {
     id: "hak-pengguna",
-    title: "6. Hak Pengguna & Penghapusan Data",
+    title: "6. Hak Pengguna",
     icon: <CheckCircle className="w-5 h-5" />,
   },
   {
@@ -497,7 +497,7 @@ export default function PrivacyPolicyClient() {
                 </p>
               </section>
 
-              {/* 6. Hak Pengguna & Penghapusan Data */}
+              {/* 6. Hak Pengguna */}
               <section
                 id="hak-pengguna"
                 className="scroll-mt-28 mb-12 border-b border-gray-100 pb-10"
@@ -507,7 +507,7 @@ export default function PrivacyPolicyClient() {
                     <CheckCircle className="w-6 h-6" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">
-                    6. Hak Pengguna & Penghapusan Data
+                    6. Hak Pengguna
                   </h2>
                 </div>
                 <p className="mb-4">
@@ -528,19 +528,12 @@ export default function PrivacyPolicyClient() {
                     Meminta penghentian layanan notifikasi WhatsApp jika
                     terdapat keadaan khusus.
                   </li>
-                  <li>
-                    Meminta penghapusan permanen dari sistem kami (dengan
-                    pengecualian riwayat transaksi keuangan dan invoice
-                    pembayaran yang wajib dipertahankan demi hukum pembukuan
-                    keuangan).
-                  </li>
                 </ul>
                 <p className="mt-4">
                   Karena pengunggahan data awal siswa dilakukan secara kolektif
-                  oleh administrator sekolah Anda, permohonan penghapusan atau
-                  koreksi data wajib diajukan melalui admin sekolah yang
-                  berwenang, yang kemudian akan meneruskannya ke tim support
-                  teknis Preselix.
+                  oleh administrator sekolah Anda, permohonan koreksi data wajib
+                  diajukan melalui admin sekolah yang berwenang, yang kemudian
+                  akan meneruskannya ke tim support teknis Preselix.
                 </p>
               </section>
 
