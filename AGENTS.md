@@ -1,5 +1,7 @@
 # lp-preselix — Agent instructions
 
+> **If asked a question, just answer — do not change code directly.**
+
 ## Stack
 
 - **Next.js 16** (App Router) + **React 19**
