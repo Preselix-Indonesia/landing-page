@@ -183,19 +183,78 @@ function ValidatorContent() {
   }
 
   if (data) {
+    const isPaid = data.status === "PAID";
+    const isCancelled = data.status === "CANCELLED";
+    const isExpired = data.status === "EXPIRED";
+
+    // Determine status design elements dynamically
+    const statusStyles = isPaid
+      ? {
+          borderClass: "border-emerald-500/20 hover:border-emerald-500/30",
+          sealClass: "bg-emerald-500/20 border-emerald-500/40",
+          sealIcon: <CheckCircle2 className="w-6 h-6 text-emerald-400" />,
+          badgeClass:
+            "bg-emerald-500/10 border-emerald-500/30 text-emerald-400",
+          badgeText: "Terverifikasi Resmi",
+          title: "Dokumen Sah & Terdaftar",
+          titleClass: "text-emerald-200",
+          themeColorClass: "text-emerald-400/80",
+          totalColorClass: "text-emerald-400",
+          buttonClass:
+            "bg-emerald-600 hover:bg-emerald-500 shadow-emerald-600/20",
+        }
+      : isCancelled || isExpired
+        ? {
+            borderClass: "border-rose-500/20 hover:border-rose-500/30",
+            sealClass: "bg-rose-500/20 border-rose-500/40",
+            sealIcon: <AlertTriangle className="w-6 h-6 text-rose-400" />,
+            badgeClass: "bg-rose-500/10 border-rose-500/30 text-rose-400",
+            badgeText: isCancelled
+              ? "Dokumen Dibatalkan"
+              : "Dokumen Kadaluarsa",
+            title: isCancelled ? "Transaksi Dibatalkan" : "Tagihan Kadaluarsa",
+            titleClass: "text-rose-200",
+            themeColorClass: "text-rose-400/80",
+            totalColorClass: "text-rose-400",
+            buttonClass: "bg-rose-600 hover:bg-rose-500 shadow-rose-600/20",
+          }
+        : {
+            borderClass: "border-amber-500/20 hover:border-amber-500/30",
+            sealClass: "bg-amber-500/20 border-amber-500/40",
+            sealIcon: <FileCheck2 className="w-6 h-6 text-amber-400" />,
+            badgeClass: "bg-amber-500/10 border-amber-500/30 text-amber-400",
+            badgeText: "Tagihan Aktif Terdaftar",
+            title: "Dokumen Tagihan Resmi",
+            titleClass: "text-amber-200",
+            themeColorClass: "text-amber-400/80",
+            totalColorClass: "text-amber-400",
+            buttonClass: "bg-amber-600 hover:bg-amber-500 shadow-amber-600/20",
+          };
+
+    const displayPaymentMethod =
+      data.paymentMethod === "MANUAL" ? "Transfer Bank" : data.paymentMethod;
+
     return (
-      <div className="bg-slate-900/40 backdrop-blur-xl border border-emerald-500/20 rounded-3xl p-8 shadow-2xl hover:border-emerald-500/30 transition-all duration-300 relative group">
+      <div
+        className={`bg-slate-900/40 backdrop-blur-xl border ${statusStyles.borderClass} rounded-3xl p-8 shadow-2xl transition-all duration-300 relative group`}
+      >
         {/* Outer verification seal overlay */}
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-emerald-500/20 border border-emerald-500/40 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-          <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+        <div
+          className={`absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 ${statusStyles.sealClass} rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+        >
+          {statusStyles.sealIcon}
         </div>
 
         <div className="text-center mt-4 space-y-1">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
-            <ShieldCheck className="w-3.5 h-3.5" /> Terverifikasi Resmi
+          <div
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${statusStyles.badgeClass} text-xs font-bold uppercase tracking-wider mb-2`}
+          >
+            <ShieldCheck className="w-3.5 h-3.5" /> {statusStyles.badgeText}
           </div>
-          <h2 className="text-2xl font-bold tracking-tight text-emerald-200">
-            Dokumen Sah & Terdaftar
+          <h2
+            className={`text-2xl font-bold tracking-tight ${statusStyles.titleClass}`}
+          >
+            {statusStyles.title}
           </h2>
           <p className="text-xs text-slate-400">
             Telah diverifikasi oleh PT PRESELIX DIGITAL NUSANTARA
@@ -206,8 +265,10 @@ function ValidatorContent() {
         <div className="mt-8 space-y-4 relative border-t border-b border-slate-800/80 py-6">
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
-              <FileCheck2 className="w-4 h-4 text-emerald-400/80" /> No. Invoice
-              / Kwitansi
+              <FileCheck2
+                className={`w-4 h-4 ${statusStyles.themeColorClass}`}
+              />{" "}
+              No. Invoice / Kwitansi
             </span>
             <span className="text-slate-200 text-xs font-mono font-semibold text-right break-all">
               {data.invoiceNumber}{" "}
@@ -217,8 +278,8 @@ function ValidatorContent() {
 
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
-              <Building className="w-4 h-4 text-emerald-400/80" /> Nama
-              Lembaga/Sekolah
+              <Building className={`w-4 h-4 ${statusStyles.themeColorClass}`} />{" "}
+              Nama Lembaga/Sekolah
             </span>
             <span className="text-slate-200 text-xs font-semibold text-right">
               {data.schoolName}
@@ -227,7 +288,8 @@ function ValidatorContent() {
 
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
-              <Mail className="w-4 h-4 text-emerald-400/80" /> Email Admin
+              <Mail className={`w-4 h-4 ${statusStyles.themeColorClass}`} />{" "}
+              Email Admin
             </span>
             <span className="text-slate-200 text-xs font-semibold text-right break-all">
               {data.schoolEmail}
@@ -236,8 +298,8 @@ function ValidatorContent() {
 
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
-              <Package className="w-4 h-4 text-emerald-400/80" /> Layanan &
-              Durasi
+              <Package className={`w-4 h-4 ${statusStyles.themeColorClass}`} />{" "}
+              Layanan & Durasi
             </span>
             <span className="text-slate-200 text-xs font-semibold text-right">
               Paket {data.packageName.toUpperCase()} ({data.duration})
@@ -246,18 +308,29 @@ function ValidatorContent() {
 
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
-              <CreditCard className="w-4 h-4 text-emerald-400/80" /> Pembayaran
+              <CreditCard
+                className={`w-4 h-4 ${statusStyles.themeColorClass}`}
+              />{" "}
+              Pembayaran
             </span>
             <span className="text-slate-200 text-xs font-semibold text-right">
-              {data.paymentMethod} •{" "}
-              <span className="text-emerald-400 font-bold">LUNAS</span>
+              {displayPaymentMethod} •{" "}
+              {data.status === "PAID" ? (
+                <span className="text-emerald-400 font-bold">LUNAS</span>
+              ) : data.status === "CANCELLED" ? (
+                <span className="text-rose-400 font-bold">DIBATALKAN</span>
+              ) : data.status === "EXPIRED" ? (
+                <span className="text-slate-400 font-bold">KADALUARSA</span>
+              ) : (
+                <span className="text-amber-400 font-bold">BELUM DIBAYAR</span>
+              )}
             </span>
           </div>
 
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
-              <Calendar className="w-4 h-4 text-emerald-400/80" /> Tanggal
-              Transaksi
+              <Calendar className={`w-4 h-4 ${statusStyles.themeColorClass}`} />{" "}
+              Tanggal Transaksi
             </span>
             <span className="text-slate-200 text-xs font-semibold text-right">
               {formatDate(data.paidAt || data.createdAt)}
@@ -267,9 +340,11 @@ function ValidatorContent() {
 
         <div className="mt-6 flex justify-between items-center bg-slate-800/20 rounded-2xl p-4 border border-slate-800/80">
           <span className="text-slate-400 text-xs font-medium">
-            Total Nominal Terbayar
+            {data.status === "PAID"
+              ? "Total Nominal Terbayar"
+              : "Total Nominal Tagihan"}
           </span>
-          <span className="text-emerald-400 text-lg font-bold">
+          <span className={`text-lg font-bold ${statusStyles.totalColorClass}`}>
             {formatToRupiah(data.totalAmount)}
           </span>
         </div>
@@ -277,7 +352,7 @@ function ValidatorContent() {
         <div className="mt-8 flex flex-col gap-3">
           <Link
             href="/"
-            className="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white text-sm font-semibold rounded-2xl shadow-lg shadow-emerald-600/20 text-center transition-all duration-200 flex items-center justify-center gap-2"
+            className={`w-full py-3.5 active:scale-[0.99] text-white text-sm font-semibold rounded-2xl shadow-lg text-center transition-all duration-200 flex items-center justify-center gap-2 ${statusStyles.buttonClass}`}
           >
             <ArrowLeft className="w-4 h-4" /> Kembali ke Beranda
           </Link>
