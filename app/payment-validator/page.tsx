@@ -279,7 +279,7 @@ function ValidatorContent() {
           <div className="flex items-center justify-between gap-4">
             <span className="text-slate-400 text-xs flex items-center gap-2 shrink-0">
               <Building className={`w-4 h-4 ${statusStyles.themeColorClass}`} />{" "}
-              Nama Lembaga/Sekolah
+              Nama Sekolah
             </span>
             <span className="text-slate-200 text-xs font-semibold text-right">
               {data.schoolName}
@@ -340,9 +340,7 @@ function ValidatorContent() {
 
         <div className="mt-6 flex justify-between items-center bg-slate-800/20 rounded-2xl p-4 border border-slate-800/80">
           <span className="text-slate-400 text-xs font-medium">
-            {data.status === "PAID"
-              ? "Total Nominal Terbayar"
-              : "Total Nominal Tagihan"}
+            {data.status === "PAID" ? "Total Terbayar" : "Total Tagihan"}
           </span>
           <span className={`text-lg font-bold ${statusStyles.totalColorClass}`}>
             {formatToRupiah(data.totalAmount)}
