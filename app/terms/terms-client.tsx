@@ -565,10 +565,10 @@ export default function TermsClient() {
                       Email Dukungan
                     </span>
                     <a
-                      href="mailto:support@preselix.id"
+                      href="mailto:info@preselix.id"
                       className="text-sm text-blue-600 hover:underline"
                     >
-                      support@preselix.id
+                      info@preselix.id
                     </a>
                   </div>
 
