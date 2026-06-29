@@ -22,9 +22,10 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Preselix dikembangkan oleh <strong>PT PRESELIX DIGITAL NUSANTARA</strong>.
-              Solusi digitalisasi presensi sekolah terbaik di Indonesia untuk ekosistem pendidikan yang lebih modern,
-              efisien, dan transparan.
+              Preselix dikembangkan oleh{" "}
+              <strong>PT PRESELIX DIGITAL NUSANTARA</strong>. Solusi
+              digitalisasi presensi sekolah terbaik di Indonesia untuk ekosistem
+              pendidikan yang lebih modern, efisien, dan transparan.
             </p>
             <div className="flex gap-4">
               <Link
@@ -111,12 +112,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-white transition-colors"
+                >
                   Kebijakan Privasi
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-white transition-colors">
+                <Link
+                  href="/terms"
+                  className="hover:text-white transition-colors"
+                >
                   Syarat & Ketentuan
                 </Link>
               </li>
@@ -131,8 +138,8 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-blue-500 mt-1" />
                 <span>
                   PT PRESELIX DIGITAL NUSANTARA <br />
-                  GREEN HARMONY PERINTIS BLOK D/11, Tamalanrea
-                  Indah, Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245
+                  GREEN HARMONY PERINTIS BLOK D/11, Tamalanrea Indah,
+                  Tamalanrea, Kota Makassar, Sulawesi Selatan, 90245
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -141,7 +148,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-500" />
-                <span>support@preselix.id</span>
+                <span>info@preselix.id</span>
               </li>
             </ul>
           </div>
@@ -149,8 +156,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
           <p>
-            © {new Date().getFullYear()} PT PRESELIX DIGITAL NUSANTARA. All rights reserved. Dibuat
-            dengan ❤️ untuk Pendidikan Indonesia.
+            © {new Date().getFullYear()} PT PRESELIX DIGITAL NUSANTARA. All
+            rights reserved. Dibuat dengan ❤️ untuk Pendidikan Indonesia.
           </p>
         </div>
       </div>
