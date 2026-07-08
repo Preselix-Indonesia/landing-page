@@ -5,6 +5,7 @@ import Illustration from "@/components/Illustration";
 import Navbar from "@/components/Navbar";
 import HowItWorks from "@/components/HowItWorks";
 import CtaSection from "@/components/CtaSection";
+import WhatsAppBotAccess from "@/components/WhatsAppBotAccess";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <About />
         <HowItWorks />
         <Illustration />
+        <WhatsAppBotAccess />
         <CtaSection />
       </main>
       <Footer />
