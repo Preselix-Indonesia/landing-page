@@ -106,9 +106,10 @@ function ValidatorContent() {
 
         const resJson = await response.json();
         setData(resJson.data);
-      } catch (err: any) {
+      } catch (err) {
+        const error = err as Error;
         setError(
-          err.message ||
+          error.message ||
             "Terjadi kesalahan sistem saat memvalidasi pembayaran.",
         );
       } finally {

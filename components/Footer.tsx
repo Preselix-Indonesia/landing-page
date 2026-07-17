@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#features"
+                  href="/#features"
                   className="hover:text-white transition-colors"
                 >
                   Fitur Utama
@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#how-it-works"
+                  href="/#how-it-works"
                   className="hover:text-white transition-colors"
                 >
                   Cara Kerja
@@ -72,10 +72,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#showcase"
+                  href="/#showcase"
                   className="hover:text-white transition-colors"
                 >
                   Demo Produk
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tutorial"
+                  className="hover:text-white transition-colors"
+                >
+                  Tutorial
                 </Link>
               </li>
               <li>

@@ -53,22 +53,28 @@ const Navbar: FC<{ className?: string }> = ({ className }) => {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="#features"
+            href="/#features"
             className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Fitur
           </Link>
           <Link
-            href="#how-it-works"
+            href="/#how-it-works"
             className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Cara Kerja
           </Link>
           <Link
-            href="#showcase"
+            href="/#showcase"
             className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Demo
+          </Link>
+          <Link
+            href="/tutorial"
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+          >
+            Tutorial
           </Link>
         </nav>
 
