@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "./Button";
+import { Sparkles } from "lucide-react";
 
 export default function Hero() {
   const router = useRouter();
@@ -27,6 +28,16 @@ export default function Hero() {
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
               Sistem presensi digital real-time untuk tiap jam pelajaran. Pantau kehadiran siswa di setiap kelas, kirim laporan otomatis, dan notifikasi WhatsApp langsung ke orang tua.
             </p>
+
+            <div className="flex items-start gap-3 self-center md:self-start rounded-2xl border border-blue-100 bg-blue-50/80 px-4 py-3 text-left text-sm text-gray-700 shadow-sm max-w-xl">
+              <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
+              <p>
+                Operator yang mendaftar akan otomatis mendapatkan{" "}
+                <span className="font-bold text-blue-700">free trial 30 hari</span>.
+                Butuh waktu lebih panjang untuk uji coba bersama guru dan staf?
+                Hubungi admin Preselix untuk menambah masa trial.
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4">
               <Button
