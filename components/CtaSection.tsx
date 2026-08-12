@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "./Button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 
 export default function CtaSection() {
   const router = useRouter();
@@ -21,9 +21,16 @@ export default function CtaSection() {
             </h2>
             <p className="text-blue-100 text-lg md:text-xl">
               Bergabunglah dengan puluhan sekolah lain yang telah memodernisasi
-              administrasi mereka dengan Preselix. Mulai langkah pertama Anda
-              hari ini.
+              administrasi mereka dengan Preselix. Daftar sekarang dan masa
+              free trial 30 hari akan aktif otomatis untuk operator sekolah.
             </p>
+            <div className="mx-auto flex max-w-2xl items-start justify-center gap-3 rounded-2xl bg-white/10 px-4 py-3 text-left text-sm text-blue-50 ring-1 ring-white/20 md:text-base">
+              <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-white" />
+              <p>
+                Jika sekolah membutuhkan waktu evaluasi lebih lama bersama guru,
+                tim admin Preselix siap membantu menambah masa trial.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-bold shadow-lg"
