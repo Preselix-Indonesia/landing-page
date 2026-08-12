@@ -80,6 +80,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/#whatsapp-notification-flow"
+                  className="hover:text-white transition-colors"
+                >
+                  Metode Notifikasi WA
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#whatsapp-bot-access"
+                  className="hover:text-white transition-colors"
+                >
+                  Bot WhatsApp
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/tutorial"
                   className="hover:text-white transition-colors"
                 >

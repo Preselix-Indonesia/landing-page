@@ -51,7 +51,7 @@ const Navbar: FC<{ className?: string }> = ({ className }) => {
           <h1 className="font-bold text-xl text-blue-600">Preselix</h1>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-8">
           <Link
             href="/#features"
             className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
@@ -69,6 +69,18 @@ const Navbar: FC<{ className?: string }> = ({ className }) => {
             className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Demo
+          </Link>
+          <Link
+            href="/#whatsapp-notification-flow"
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+          >
+            Notifikasi WA
+          </Link>
+          <Link
+            href="/#whatsapp-bot-access"
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+          >
+            Bot WA
           </Link>
           <Link
             href="/tutorial"

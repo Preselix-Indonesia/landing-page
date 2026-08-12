@@ -27,7 +27,7 @@ export default function WhatsAppBotAccess() {
   )}`;
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="whatsapp-bot-access" className="py-20 bg-gray-50">
       <div className="container mx-auto px-5 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center rounded-3xl border border-blue-100 bg-white p-8 md:p-12 shadow-sm">
           <div className="space-y-6">
