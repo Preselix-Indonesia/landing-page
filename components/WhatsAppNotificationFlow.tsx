@@ -41,7 +41,7 @@ const homeroomSteps = [
     icon: <Clock3 className="h-5 w-5" />,
     title: "Status perlu perhatian",
     description:
-      "Jika siswa tercatat bukan Hadir, wali kelas tidak perlu membuka bot atau memilih menu apa pun.",
+      "Notifikasi berlaku untuk status Izin, Sakit, dan Alpa. Status Hadir tidak dikirimkan sebagai notifikasi.",
   },
   {
     icon: <CheckCircle2 className="h-5 w-5" />,
@@ -54,7 +54,7 @@ const homeroomSteps = [
 const visibleNotes = [
   "Jika nomor orang tua belum terhubung, bot akan memberi tahu agar menghubungi operator sekolah.",
   "Jika belum ada presensi hari ini, bot tetap mengaktifkan pemantauan dan mengirim update saat data mulai masuk.",
-  "Jika sesi hari itu sudah berakhir, orang tua tetap bisa melihat informasi hari ini dan mengaktifkan pemantauan kembali esok hari.",
+  "Pemberitahuan presensi difokuskan pada kondisi Izin, Sakit, dan Alpa agar informasi yang masuk benar-benar perlu diperhatikan.",
 ];
 
 export default function WhatsAppNotificationFlow() {
@@ -90,7 +90,7 @@ export default function WhatsAppNotificationFlow() {
             badge="Otomatis tanpa trigger"
             icon={<BellRing className="h-6 w-6" />}
             title="Ke Wali Kelas"
-            description="Alurnya berupa pemberitahuan langsung dari sekolah, sehingga wali kelas cepat tahu ketika ada siswa yang perlu diperhatikan."
+            description="Alurnya berupa pemberitahuan langsung dari sekolah untuk status Izin, Sakit, dan Alpa, sedangkan status Hadir tidak dikirimkan sebagai notifikasi."
             steps={homeroomSteps}
             accent="blue"
           />
